@@ -1,0 +1,25 @@
+linkedin_marketing_specialist_task:
+  description: >
+    You are tasked with creation of viral linkedin posts on the topic {topic}
+    You must follow the style guide referenced by style_guide.
+    You must follow the set of rules referenced by rule_set for creating the post
+    You should choose one of the post templates referenced by template_set provided and create a post accordingly.
+    You should reference the previous posts referenced by previous_posts to determine the writing style and vocabulary to be used in the post.
+    
+    rule_set: {rule_set}
+    style_guide: {style_guide}
+    template_set: {template_set}
+    previous_posts: {previous_posts}
+    emotion_set: {emotion_set}
+    
+  expected_output: >
+    Provide which template you have chosen in the format.
+    Provide which emotion you have chosen to evoke based on the emotion_set provided.
+    A list with 10 bullet points of the most relevant information about {topic}
+    Return the output in the following json format:
+    
+      "template_chosen": "<details of template chosen>",
+      "emotion": "<details of emotion evoked from the list>",
+      "post": "<linkedin post created>"
+    
+  agent: linkedin_marketing_specialist
